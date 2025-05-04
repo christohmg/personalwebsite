@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Christ's portfolio showcasing work in marketing, machine learning, and creative projects." />
+  <meta property="og:title" content="Christ's Portfolio" />
+  <meta property="og:description" content="Creative marketer & ML minor. Explore my professional work, academic projects, and more!" />
+  <meta property="og:image" content="WebsiteImageHeader.jpg" />
+  <title>Christ's Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Starfish (clickable home link) -->
+  <div class="home-link" aria-label="Home">
+    <a href="index.html">
+      <img src="starfish.png" alt="Home icon" loading="lazy" />
+    </a>
+  </div>
+
+  <!-- Bubbles -->
+  <div id="bubbles" class="bubble-container"></div>
+  <div id="status" aria-live="polite" class="visually-hidden"></div>
+
+  <main id="main-content">
+    <header class="container" role="banner">
+      <div class="content header-grid">
+        <div class="left-column">
+          <nav class="nav-circles" aria-label="Section navigation">
+            <a href="professional.html" class="nav-item" aria-label="Professional Work">
+              <img src="bluetang.png" alt="Professional Work icon" width="60" height="60" loading="lazy" />
+              <span>Professional Work</span>
+            </a>
+            <a href="academic.html" class="nav-item" aria-label="Academic Projects">
+              <img src="crab.png" alt="Academic Projects icon" width="60" height="60" loading="lazy" />
+              <span>Academic Projects</span>
+            </a>
+            <a href="code.html" class="nav-item" aria-label="Code">
+              <img src="dolphin.png" alt="Code icon" width="60" height="60" loading="lazy" />
+              <span>Code</span>
+            </a>
+            <a href="personal.html" class="nav-item" aria-label="Personal Projects">
+              <img src="seagull.png" alt="Personal Projects icon" width="60" height="60" loading="lazy" />
+              <span>Personal Projects</span>
+            </a>
+          </nav>
+
+          <section class="hero-text" aria-labelledby="hero-heading">
+            <h1 id="hero-heading">Hi! I'm Christ, and This is My Portfolio</h1>
+            <p>I'm a creative marketer with technical skills in storytelling and branding—making experiences both useful and fun.</p>
+            <p>Having lived in Iran, Austria, Texas, and California, I bring a global perspective to my work. Let's connect and explore new ideas!</p>
+            <nav class="button-row" aria-label="Social and resume links">
+              <a href="https://www.linkedin.com/in/christohanesians/" class="button-link" target="_blank" rel="noopener">LinkedIn</a>
+              <a href="https://github.com/christohmg" class="button-link" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://drive.google.com/file/d/1RDIN_7HfZChOX4Ye7Io5dWvt580RlpOt/view" class="button" target="_blank" rel="noopener">Resume</a>
+            </nav>
+          </section>
+        </div>
+
+        <div class="right-column">
+          <div class="hero-image-container" tabindex="0" title="Click to flip" aria-label="Flip portrait">
+            <div class="hero-flip-card">
+              <img
+                src="WebsiteImageHeader.jpg"
+                srcset="WebsiteImageHeader-small.jpg 600w, WebsiteImageHeader.jpg 1200w"
+                sizes="(max-width: 768px) 100vw, 400px"
+                loading="lazy"
+                alt="Portrait of Christ"
+                class="hero-img front"
+              />
+              <div class="back">
+                <img
+                  src="realface.png"
+                  loading="lazy"
+                  alt="Alternate portrait of Christ"
+                  class="hero-img"
+                />
+                <div class="flip-text">Not AI Generated</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
