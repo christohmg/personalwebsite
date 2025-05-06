@@ -62,17 +62,17 @@
           <div class="hero-image-container" tabindex="0" title="Click to flip" aria-label="Flip portrait">
             <div class="hero-flip-card">
               <img
-                src="WebsiteImageHeader.jpg"
-                srcset="WebsiteImageHeader-small.jpg 600w, WebsiteImageHeader.jpg 1200w"
-                sizes="(max-width: 768px) 100vw, 400px"
+                src="./WebsiteImageHeader.jpg"
                 alt="Portrait of Christ"
                 class="hero-img front"
+                onerror="this.onerror=null; this.src='./WebsiteImageHeader.jpg';"
               />
               <div class="back">
                 <img
-                  src="realface.png"
+                  src="./realface.png"
                   alt="Alternate portrait of Christ"
                   class="hero-img"
+                  onerror="this.onerror=null; this.src='./realface.png';"
                 />
                 <div class="flip-text">Not AI Generated</div>
               </div>
