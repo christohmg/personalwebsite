@@ -1,4 +1,16 @@
 function init() {
+  // Preload images
+  const imagesToPreload = [
+    'WebsiteImageHeader.jpg',
+    'WebsiteImageHeader-small.jpg',
+    'realface.png'
+  ];
+  
+  imagesToPreload.forEach(src => {
+    const img = new Image();
+    img.src = src;
+  });
+
   const page = window.location.pathname.split('/').pop();
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const container     = document.getElementById('bubbles');
@@ -66,17 +78,23 @@ function init() {
     });
   });
 
-  // Flip-card keyboard & click support
-  const flipContainer = document.querySelector('.hero-image-container');
-  if (flipContainer) {
-    flipContainer.addEventListener('keydown', e => {
+  // Initialize flip card
+  const heroImageContainer = document.querySelector('.hero-image-container');
+  if (heroImageContainer) {
+    let isFlipped = false;
+    
+    const handleFlip = (e) => {
+      e.preventDefault();
+      isFlipped = !isFlipped;
+      heroImageContainer.classList.toggle('flipped');
+    };
+
+    heroImageContainer.addEventListener('click', handleFlip);
+    heroImageContainer.addEventListener('touchstart', handleFlip);
+    heroImageContainer.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        flipContainer.classList.toggle('flipped');
+        handleFlip(e);
       }
-    });
-    flipContainer.addEventListener('click', () => {
-      flipContainer.classList.toggle('flipped');
     });
   }
 
@@ -92,22 +110,6 @@ function init() {
 
   document.querySelectorAll('.section').forEach(sec => {
     observer.observe(sec);
-  });
-
-  // Add touch event handling for the flip card
-  const heroImageContainer = document.querySelector('.hero-image-container');
-  let isFlipped = false;
-
-  heroImageContainer.addEventListener('click', () => {
-    isFlipped = !isFlipped;
-    heroImageContainer.classList.toggle('flipped');
-  });
-
-  // Add touch event handling for mobile
-  heroImageContainer.addEventListener('touchstart', (e) => {
-    e.preventDefault(); // Prevent default touch behavior
-    isFlipped = !isFlipped;
-    heroImageContainer.classList.toggle('flipped');
   });
 }
 
