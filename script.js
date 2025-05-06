@@ -93,6 +93,22 @@ function init() {
   document.querySelectorAll('.section').forEach(sec => {
     observer.observe(sec);
   });
+
+  // Add touch event handling for the flip card
+  const heroImageContainer = document.querySelector('.hero-image-container');
+  let isFlipped = false;
+
+  heroImageContainer.addEventListener('click', () => {
+    isFlipped = !isFlipped;
+    heroImageContainer.classList.toggle('flipped');
+  });
+
+  // Add touch event handling for mobile
+  heroImageContainer.addEventListener('touchstart', (e) => {
+    e.preventDefault(); // Prevent default touch behavior
+    isFlipped = !isFlipped;
+    heroImageContainer.classList.toggle('flipped');
+  });
 }
 
 // Modal popup for logo blocks

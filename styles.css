@@ -304,7 +304,13 @@ body {
 
 /* Add touch-friendly styles */
 @media (hover: none) {
-  .hero-image-container:active .hero-flip-card {
+  .hero-image-container {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .hero-image-container:active .hero-flip-card,
+  .hero-image-container.flipped .hero-flip-card {
     transform: rotateY(180deg);
   }
 
