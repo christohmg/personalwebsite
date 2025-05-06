@@ -246,21 +246,32 @@ body {
 }
 .home-link {
   position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 1000;
-  transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+  top: 1rem;
+  left: 1rem;
+  z-index: 100;
+  background: white;
+  border-radius: 50%;
+  padding: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .home-link img {
   width: 60px;
   height: 60px;
-  transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+  transition: transform 0.3s ease-in-out;
 }
 
-.home-link:hover img,
-.home-link:focus-within img {
-  transform: scale(1.5); /* Grow the starfish when hovered or focused */
+@media (max-width: 768px) {
+  .home-link {
+    top: 0.5rem;
+    left: 0.5rem;
+    padding: 0.25rem;
+  }
+  
+  .home-link img {
+    width: 45px;
+    height: 45px;
+  }
 }
 
 .logo-grid {
