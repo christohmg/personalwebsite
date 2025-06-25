@@ -381,7 +381,7 @@ function setupLogoPopups() {
         title: 'Vacation!',
         body: `<p>Video compilations of some of my recent travels all done on Canva- I have gotten really good at creating content (video, images, etc) on Canva thanks to personal projects such as these</p>
 <div class="link-preview-card">
-  <a href="https://drive.google.com/file/d/1dj6R6cjdlYxMIujjX2BMXzyPxzCPFoiW/view" target="_blank" rel="noopener">
+  <a href="https://drive.google.com/file/d/1H5BCPw_omDPlGezMoEQ44IJqBc-abTX5/view?usp=sharing" target="_blank" rel="noopener">
     <div>
       <div class="link-preview-title">Oahu2024</div>
       <div class="link-preview-desc">View the video compilation</div>
@@ -389,7 +389,7 @@ function setupLogoPopups() {
   </a>
 </div>
 <div class="link-preview-card">
-  <a href="https://drive.google.com/file/d/1opfhvdQpRHCQEUeJyQLnNlaOauFnoWgB/view" target="_blank" rel="noopener">
+  <a href="https://drive.google.com/file/d/1QYFP7BRuinb6-dOHDfaz1kU_tZj4A2TE/view?usp=sharing" target="_blank" rel="noopener">
     <div>
       <div class="link-preview-title">PCHDrive</div>
       <div class="link-preview-desc">View the video compilation</div>
